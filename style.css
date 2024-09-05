@@ -31,7 +31,7 @@ a, .btn {
 /* Header Navigation */
 .nav {
     display: flex;
-    background-color: rgb(253, 235, 73);
+    background-color: rgb(170, 160, 78);
     justify-content: space-around;
     align-items: center;
     height: 12vh;
@@ -240,7 +240,7 @@ ul#navigation {
     align-items: center;
     gap: 4em;
     padding: 2rem 10%;
-    height: 100vh;
+    height: 100dvh;
     background-image: url('./Images/AboutBG.jpg');
     background-size: cover;
     color: white;
@@ -260,6 +260,11 @@ ul#navigation {
     gap: 5rem;
 }
 
+.about-left {
+    display: flex;
+    align-items: center;
+}
+
 .about-left img {
     max-width: 30rem;
     border-radius: 1rem;
@@ -276,6 +281,121 @@ ul#navigation {
     background-color: rgba(180,180,180, 50%);
     font-weight: 600;
 }
+
+/* Experience & Education */
+/* SECTION EXPERIENCE & EDUCATION */
+#experience-education {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+/* Container for both sections */
+.section-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Half section (Experience and Education) */
+.half-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: white;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* Styling Experience Section */
+#experience-section {
+    border-right: 2px solid #e0e0e0;
+}
+
+#experience-section .section-title {
+    color: #1f2937;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.experience-container .experience-item {
+    margin-bottom: 2rem;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item p {
+    color: #6b7280;
+}
+
+/* Styling Education Section */
+#education-section .section-title {
+    color: #1f2937;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.education-container .education-item {
+    margin-bottom: 2rem;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.education-item p {
+    color: #6b7280;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .half-section {
+        height: auto; /* Allow sections to grow based on content */
+        padding: 1.5rem;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    /* Ensure the content doesn’t overflow and is readable */
+    .experience-container, .education-container {
+        overflow-y: auto;
+    }
+}
+
+  
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .half-section {
+        height: 50vh;
+        padding: 1.5rem;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+    }
+} 
 
 /* Profile Section for smaller screens */
 @media screen and (max-width: 1220px) {
