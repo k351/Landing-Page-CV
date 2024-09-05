@@ -18,11 +18,6 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    /* display: flex;
-    flex-direction: column;
-    width: 100vw;
-    max-width: 100%; 
-    overflow-x: hidden; */
 }
 
 p {
@@ -36,18 +31,10 @@ a, .btn {
 /* Header Navigation */
 .nav {
     display: flex;
+    background-color: rgb(253, 235, 73);
     justify-content: space-around;
     align-items: center;
-
-    /* position: fixed;
-    font-size: 20px;
-    padding: 12px 4rem;
-    width: 100%; */
-
-    /* background-color: var(--main);
-    color: white; */
-    height: 17vh;
-    /* z-index: 1000;  */
+    height: 12vh;
 }
 
 ul#navigation {
@@ -67,7 +54,7 @@ ul#navigation {
 }
 
 #navigation a:hover {
-    color: grey;
+    color: white;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
@@ -159,6 +146,91 @@ ul#navigation {
   #hamburger-icon span:first-child {
     transform: none;
   }
+
+/*  Profile */
+#profile {
+    height: 88vh;
+    padding: 0 10rem;
+    background-color: beige;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile_pic-container img {
+    width: 100%; 
+    max-width: 20rem; 
+    height: auto;
+    border-radius: 50%; 
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.cta_title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.cta_job {
+    font-size: 1rem;
+}
+
+/* Button */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+  }
+  
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+  }
+  
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+  }
+  
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+  }
+  
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+  }
+  
+.btn-color-2 {
+    background: none;
+  }
+  
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+  }
+  
+.btn-container {
+    gap: 1rem;
+}
 
 /* Media queries */
 @media screen and (max-width: 1200px) {
