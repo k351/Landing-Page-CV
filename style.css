@@ -192,7 +192,7 @@ ul#navigation {
     gap: 1rem;
   }
   
-.btn {
+  .btn {
     font-weight: 600;
     transition: all 300ms ease;
     padding: 1rem;
@@ -200,45 +200,133 @@ ul#navigation {
     border-radius: 2rem;
   }
   
-.btn-color-1,
-.btn-color-2 {
+  .btn-color-1,
+  .btn-color-2 {
     border: rgb(53, 53, 53) 0.1rem solid;
   }
   
-.btn-color-1:hover,
-.btn-color-2:hover {
+  .btn-color-1:hover,
+  .btn-color-2:hover {
     cursor: pointer;
   }
   
-.btn-color-1,
-.btn-color-2:hover {
+  .btn-color-1,
+  .btn-color-2:hover {
     background: rgb(53, 53, 53);
     color: white;
   }
   
-.btn-color-1:hover {
+  .btn-color-1:hover {
     background: rgb(0, 0, 0);
   }
   
-.btn-color-2 {
+  .btn-color-2 {
     background: none;
   }
   
-.btn-color-2:hover {
+  .btn-color-2:hover {
     border: rgb(255, 255, 255) 0.1rem solid;
   }
   
-.btn-container {
+  .btn-container {
     gap: 1rem;
+  }
+
+/* About */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    padding: 2rem 10%;
+    height: 100vh;
+    background-image: url('./Images/AboutBG.jpg');
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Media queries */
-@media screen and (max-width: 1200px) {
+#about h1 {
+    font-size: 3rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    max-width: 100%;
+    padding: 1rem;
+    gap: 5rem;
+}
+
+.about-left img {
+    max-width: 30rem;
+    border-radius: 1rem;
+}
+
+.about-description {
+    font-size: 1.5rem;
+    max-width: 40rem;
+    width: 80%;
+}
+
+.about-description p {
+    color: white;
+    background-color: rgba(180,180,180, 50%);
+    font-weight: 600;
+}
+
+/* Profile Section for smaller screens */
+@media screen and (max-width: 1220px) {
     header.nav, #navigation {
         display: none;
     }
 
     #hamburger-nav {
         display: flex;
+    }
+
+    #profile {
+        flex-direction: column; 
+        padding: 4rem 1rem;
+        text-align: center; 
+        justify-content: center;
+    }
+
+    .profile_pic-container img {
+        max-width: 15rem; 
+        margin-bottom: 2rem; 
+    }
+
+    .cta_title {
+        font-size: 3rem; 
+        line-height: 3.5rem;
+    }
+
+    .cta_job {
+        font-size: 1rem;
+    }
+
+    #about {
+        padding: 2rem 1rem;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .about-left img {
+        margin-bottom: 1rem;
+    }
+
+    .about-description {
+        font-size: 1.2rem; 
+        text-align: center;
     }
 }
