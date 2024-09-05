@@ -297,7 +297,7 @@ ul#navigation {
 
 .section-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     width: 90%;
     max-width: 1200px;
     /* Updated height property */
@@ -576,6 +576,12 @@ footer {
 
     #hamburger-nav {
         display: flex;
+        padding: 0 1rem;
+        width: 100vw; 
+        position: fixed;
+        top: 0;
+        background-color: rgb(170, 160, 78); 
+        z-index: 1000;
     }
 
     #profile {
