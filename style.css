@@ -285,41 +285,40 @@ ul#navigation {
 }
 
 /* Experience & Education */
-/* SECTION EXPERIENCE & EDUCATION */
 #experience-education {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #f8f8f8; */
     background-color: #19125e;
+    padding: 2rem 0;
+    height: 100dvh;
 }
 
-/* Container for both sections */
 .section-container {
     display: flex;
     gap: 1rem;
     width: 90%;
     max-width: 1200px;
-    height: 90vh;
+    /* Updated height property */
+    min-height: 50vh;
+    height: auto; /* Allowing height to adjust automatically */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Half section (Experience and Education) */
 .half-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Adjust to center as needed */
     align-items: flex-start;
     border-radius: 10px;
     padding: 2rem;
     background-color: white;
-    /* overflow-y: auto; */
+    overflow-y: auto; /* Added to handle overflow within sections */
     scroll-behavior: smooth;
+    max-height: 100%;
 }
 
-/* Styling Experience Section */
 #experience-section {
     border-right: 2px solid #e0e0e0;
     background: linear-gradient(135deg, #f0f4ff, #ffffff);
@@ -367,10 +366,79 @@ ul#navigation {
     color: #6b7280;
 }
 
+/* Skills */
+#skills {
+    padding: 3rem 0;
+    height: 100dvh;
+    background-color: #4f4987;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+  
+.skills-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #f8f8f8;
+}
+  
+.skill {
+    margin-bottom: 2rem;
+}
+  
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+  
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+  
+.progress {
+    background-color: #4caf50;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+  
+  .progress-bar:nth-child(2) .progress {
+    background-color: #f57c00;
+  }
+  
+  .progress-bar:nth-child(3) .progress {
+    background-color: #2196f3;
+  }
+  
+  .progress-bar:nth-child(4) .progress {
+    background-color: #e91e63;
+  }
+  
+  .progress-bar:nth-child(5) .progress {
+    background-color: #9c27b0;
+  }  
+
+
 /* Contacts */
   #contacts {
     padding: 3rem 0;
     background-color: #f4f4f9;
+    height: 85dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -479,49 +547,22 @@ ul#navigation {
     min-height: 300px;
   }  
 
-
 /* Footer */
 footer {
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: #E5E7EB;
-    height: 10vh;
+    height: 10dvh;
 }
 
 /* Experience and Education */
 @media screen and (max-width: 768px) {
-    .section-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .half-section {
-        height: auto; 
-        padding: 1.5rem;
-        border-right: none;
-        border-bottom: 2px solid #e0e0e0;
-    }
-
-    .experience-container, .education-container {
-        overflow-y: auto;
-    }
-    
-    .section-container {
-        flex-direction: column;
-        height: 90%;
-    }
-
-    .half-section {
-        height: 50vh;
-        padding: 1.5rem;
-        border-right: none;
-        border-bottom: 2px solid #e0e0e0;
-    }
+   
 } 
 
 /* Profile Section for smaller screens */
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
     .nav {
         position: fixed;
         width: 100dvw;
@@ -575,14 +616,40 @@ display: flex;
     .about-description {
         width: 100%; 
         font-size: 1.2rem;
+        text-align: center;
     }
 
     #about h1 {
         font-size: 2rem;
     }
 
+    .section-container {
+        flex-direction: column;
+        height: auto;
+    }
+
     .half-section {
+        height: auto; 
+        padding: 1.5rem;
+        border-right: none;
         font-size: 0.8rem;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .experience-container, .education-container {
+        overflow-y: auto;
+    }
+    
+    .section-container {
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .half-section {
+        height: 50vh;
+        padding: 1.5rem;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
     }
 }
 
