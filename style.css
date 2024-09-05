@@ -240,7 +240,8 @@ ul#navigation {
     align-items: center;
     gap: 4em;
     padding: 2rem 10%;
-    height: 100dvh;
+    /* Remove fixed height */
+    min-height: 100vh;
     background-image: url('./Images/AboutBG.jpg');
     background-size: cover;
     color: white;
@@ -266,6 +267,7 @@ ul#navigation {
 }
 
 .about-left img {
+    max-width: 100%;
     max-width: 30rem;
     border-radius: 1rem;
 }
@@ -361,7 +363,7 @@ ul#navigation {
     color: #6b7280;
 }
 
-/* Responsiveness */
+/* Experience and Education */
 @media screen and (max-width: 768px) {
     .section-container {
         flex-direction: column;
@@ -369,24 +371,19 @@ ul#navigation {
     }
 
     .half-section {
-        height: auto; /* Allow sections to grow based on content */
+        height: auto; 
         padding: 1.5rem;
         border-right: none;
         border-bottom: 2px solid #e0e0e0;
     }
 
-    /* Ensure the content doesn’t overflow and is readable */
     .experience-container, .education-container {
         overflow-y: auto;
     }
-}
-
-  
-/* Responsiveness */
-@media screen and (max-width: 768px) {
+    
     .section-container {
         flex-direction: column;
-        height: auto;
+        height: 90%;
     }
 
     .half-section {
@@ -399,6 +396,11 @@ ul#navigation {
 
 /* Profile Section for smaller screens */
 @media screen and (max-width: 1220px) {
+    .nav {
+        position: fixed;
+        width: 100dvw;
+    }
+
     header.nav, #navigation {
         display: none;
     }
@@ -429,24 +431,28 @@ ul#navigation {
     }
 
     #about {
-        padding: 2rem 1rem;
-        gap: 2rem;
-        text-align: center;
+        padding: 2rem 5%;
+        min-height: auto; 
     }
 
     .about-content {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; 
         gap: 2rem;
-        text-align: left;
+        padding: 1rem;
     }
 
     .about-left img {
-        margin-bottom: 1rem;
+        max-width: 100%; 
+        width: 100%;
     }
 
     .about-description {
-        font-size: 1.2rem; 
-        text-align: center;
+        width: 100%; 
+        font-size: 1.2rem;
+    }
+
+    #about h1 {
+        font-size: 2rem;
     }
 }
+
