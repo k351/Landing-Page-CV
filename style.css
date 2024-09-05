@@ -155,7 +155,7 @@ ul#navigation {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .profile_pic-container img {
@@ -291,12 +291,14 @@ ul#navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #19125e;
 }
 
 /* Container for both sections */
 .section-container {
     display: flex;
+    gap: 1rem;
     width: 90%;
     max-width: 1200px;
     height: 90vh;
@@ -310,15 +312,17 @@ ul#navigation {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    border-radius: 10px;
     padding: 2rem;
     background-color: white;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     scroll-behavior: smooth;
 }
 
 /* Styling Experience Section */
 #experience-section {
     border-right: 2px solid #e0e0e0;
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
 }
 
 #experience-section .section-title {
@@ -361,6 +365,128 @@ ul#navigation {
 
 .education-item p {
     color: #6b7280;
+}
+
+/* Contacts */
+  #contacts {
+    padding: 3rem 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #19125e;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    padding: 0.75rem;
+    border: none;
+    background-color: #19125e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #2a1b8d;
+  }
+  
+  .contact-info {
+    flex: 0.5;
+    margin-top: 1px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7fb;
+    border-radius: 10px;
+  }
+  
+  .contact-info h3 {
+    margin-bottom: 1rem;
+    color: #19125e;
+  }
+  
+  .contact-info p {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .contact-info a {
+    color: #19125e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #2a1b8d;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+  }
+  
+  .contact-map {
+    flex: 1;
+    min-height: 300px;
+  }  
+
+
+/* Footer */
+footer {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E5E7EB;
+    height: 10vh;
 }
 
 /* Experience and Education */
@@ -453,6 +579,10 @@ ul#navigation {
 
     #about h1 {
         font-size: 2rem;
+    }
+
+    .half-section {
+        font-size: 0.8rem;
     }
 }
 
