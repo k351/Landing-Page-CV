@@ -189,8 +189,9 @@ ul#navigation {
 .btn-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-  }
+}
   
   .btn {
     font-weight: 600;
@@ -556,12 +557,13 @@ footer {
     height: 10dvh;
 }
 
-/* Experience and Education */
-@media screen and (max-width: 768px) {
-   
-} 
-
 /* Profile Section for smaller screens */
+@media screen and (max-width : 600px) {
+    .btn-container {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .nav {
         position: fixed;
